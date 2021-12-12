@@ -33,8 +33,7 @@ var getRepoIssues = function(repo) {
             displayWarning(repo);
         }
       });
-    }
-    else {
+    } else {
      // if not successful, redirect to homepage
      document.location.replace("./index.html");
     }
@@ -67,8 +66,7 @@ var typeEl = document.createElement("span");
 // check if issue is an actual issue or a pull request
 if (issues[i].pull_request) {
   typeEl.textContent = "(Pull request)";
-} 
-else {
+} else {
   typeEl.textContent = "(Issue)";
 }
 
@@ -86,7 +84,7 @@ var displayWarning = function(repo) {
  
 // create link element
   var linkEl = document.createElement("a");
-  linkEl.textContent = "See More Issues on GitHub.com";
+  linkEl.textContent = "GitHub.com";
   linkEl.setAttribute("href", "https://github.com/" + repo + "/issues");
   linkEl.setAttribute("target", "_blank");
 
